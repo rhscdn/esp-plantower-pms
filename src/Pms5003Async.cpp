@@ -1,7 +1,7 @@
 /*
   Pms5003Async.cpp
   
-  Specific to ESP (espsoftwareserial.h)
+  Specific to ESP using internals of espsoftwareserial.h
 */
 
 #include "Pms5003Async.h"
