@@ -35,11 +35,10 @@ bool Pms5003::set_data_reporting_mode(Report_mode mode)
     return succ;
 }
 
-bool Pms5003::get_data_reporting_mode(Report_mode &mode)
+Pms5003::Report_mode Pms5003::get_data_reporting_mode()
 {
     // There is no way to query the sensor
-    mode = _mode;
-    return true;
+    return _mode;
 }
 
 bool Pms5003::set_sleep(bool sleep)
@@ -63,11 +62,10 @@ bool Pms5003::set_sleep(bool sleep)
     return succ;
 }
 
-bool Pms5003::get_sleep(bool &sleep)
+bool Pms5003::get_sleep()
 {
     // There is no way to query the sensor
-    sleep = _sleep;
-    return true;
+    return _sleep;
 }
 
 bool Pms5003::query_data(PMSDATA_t &d)
@@ -151,10 +149,9 @@ bool Pms5003::set_data_rampup(int secs)
     return true;
 }
 
-bool Pms5003::get_data_rampup(int &secs)
+int Pms5003::get_data_rampup()
 {
-    secs = rampup_s;
-    return true;
+    return rampup_s;
 }
 
 bool Pms5003::timeout()

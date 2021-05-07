@@ -91,12 +91,7 @@ void setup()
   Serial.println("Setup: PMS start/stop and reporting sample");
 
   // The sensor always wakes in active mode, but we'll command it just to be sure
-  Pms5003::Report_mode report_mode;
-  if (!pms.get_data_reporting_mode(report_mode))
-  {
-    Serial.println("Setup: Pms5003::get_data_reporting_mode() failed");
-  }
-  if (Pms5003::REPORT_ACTIVE != report_mode)
+  if (pms.get_data_reporting_mode() != Pms5003::REPORT_ACTIVE)
   {
     Serial.println("Setup: Turning on Pms5003::REPORT_ACTIVE reporting mode");
     if (!pms.set_data_reporting_mode(Pms5003::REPORT_ACTIVE))

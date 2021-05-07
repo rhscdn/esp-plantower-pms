@@ -49,13 +49,13 @@ public:
     }
 
     bool set_data_reporting_mode(Report_mode mode);
-    bool get_data_reporting_mode(Report_mode &mode);
+    Report_mode get_data_reporting_mode();
 
     bool set_sleep(bool sleep);
-    bool get_sleep(bool &sleep);
+    bool get_sleep();
 
     bool set_data_rampup(int secs);
-    bool get_data_rampup(int &secs);
+    int get_data_rampup();
 
     bool query_data(PMSDATA_t &d);
     bool query_data(PMSDATA_t &d, int n);
