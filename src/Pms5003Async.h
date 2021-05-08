@@ -2,6 +2,8 @@
   Pms5003Async.h
   
   Specific to ESP using internals of espsoftwareserial.h
+
+  https://github.com/rhscdn/esp-plantower-pms
 */
 
 #ifndef _PMS5003Async_H

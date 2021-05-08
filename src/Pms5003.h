@@ -4,7 +4,9 @@
   Arduino library for the Plantower PMS5003 particulate matter sensor 
   attached to the ESP8266. Should also work for ESP32 boards but currently 
   untested. The base Pms5003 class is generic and should also work for most 
-  AVR boards. 
+  AVR boards.
+
+  https://github.com/rhscdn/esp-plantower-pms
 */
 
 #ifndef _PMS5003_H
