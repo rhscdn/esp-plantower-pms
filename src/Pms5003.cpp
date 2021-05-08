@@ -57,7 +57,8 @@ bool Pms5003::set_sleep(bool sleep)
     {
         _sleep = false;        // assumed as sensor gives no response to 'wakeup' cmd
         _mode = REPORT_ACTIVE; // always 'boots' into active mode
-        delay(1300);           // sensor is slow to boot and will drop commands while booting
+        // Avoid blocking delay here but user must now check sensor boots before sending commands
+        // delay(1300);           // sensor is slow to boot and will drop commands while booting
     }
     return succ;
 }
@@ -109,7 +110,7 @@ bool Pms5003::query_data(PMSDATA_t &data, int n)
             --i;
             continue;
         }
-        delay(1000);
+        delay(1000); // blocking 
     }
 
     average_data(n, data_tbl, data);
